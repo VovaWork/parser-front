@@ -51,9 +51,9 @@ class UrlsToDownload extends Component {
             array: this.state.urls,
             status: this.state.downloadWholeSite
         };
-        console.log(JSON.stringify(data))
+        // console.log(JSON.stringify(data))
         
-        // const socket = io('http://192.168.89.132:4005');
+        // const socket = io('http://192.168.89.132:4012');
         const socket = io('http://localhost:4001');
         socket.on('connect', () => {
             socket.emit('sendForm', JSON.stringify(data));
@@ -75,7 +75,7 @@ class UrlsToDownload extends Component {
             const messageList = [...this.state.downloadedUrls];
             messageList.push(res.message);
             this.setState({downloadedUrls: messageList});
-            console.log(`${res.message} ${res.status} ${res.name}`);
+            // console.log(`${res.message} ${res.status} ${res.name}`);
 
             // If res.status === download, enable download button
             if(res.status === 'download') {

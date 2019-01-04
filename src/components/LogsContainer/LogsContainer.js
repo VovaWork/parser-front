@@ -28,7 +28,7 @@ class LogsContainer extends Component {
     } = this;
 
     return (
-      <div className="tabs-container">
+      <section className="logs-container">
         <ul className="tabs-nav z-depth-3">
           {children.map((child) => {
             const { label } = child.props;
@@ -49,7 +49,7 @@ class LogsContainer extends Component {
             return child.props.children;
           })}
         </div>
-      </div>
+      </section>
     );
   }
 }
