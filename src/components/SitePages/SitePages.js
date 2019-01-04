@@ -12,8 +12,8 @@ class SitePages extends Component {
     }
 
     beginDownload = () => {
-        // const socket = io('http://localhost:4001');
-        const socket = io('http://192.168.89.132:4012');
+        const socket = io('http://localhost:4001');
+        //const socket = io('http://192.168.89.132:4012');
         socket.on('connect', () => {
             const data = JSON.stringify({array: [...this.state.selectedPages]});
             // console.log(data)
